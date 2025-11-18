@@ -1,0 +1,141 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(120deg, #1797e6 0%, #18d696 100%);
+    color: #fff;
+}
+
+.container {
+    max-width: 950px;
+    margin: 40px auto 0 auto;
+    padding: 36px 28px 28px 28px;
+    background: rgba(14, 40, 80, 0.97);
+    border-radius: 18px;
+    box-shadow: 0 10px 34px rgba(0,0,0,0.15);
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+#scoreboard {
+    display: flex;
+    justify-content: center;
+    gap: 36px;
+    margin-bottom: 30px;
+}
+
+.team1, .team2 {
+    flex: 1;
+    background: #1a2b4c;
+    border-radius: 13px;
+    padding: 24px 0 20px 0;
+    box-shadow: 0 4px 12px rgba(20,30,60,0.08);
+    text-align: center;
+    min-width: 220px;
+}
+
+.team1 h2, .team2 h2 {
+    margin: 0 0 10px 0;
+    color: #18d696;
+    font-size: 1.3em;
+    letter-spacing: 1.3px;
+    font-weight: bold;
+}
+
+.team1 p, .team2 p {
+    margin: 12px 0 0 0;
+    font-size: 1.4em;
+    color: #ffe66d;
+    font-weight: 700;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+#player-stats, #commentary {
+    background: #183058;
+    border-radius: 11px;
+    box-shadow: 0 2px 8px rgba(20,30,40,0.11);
+    padding: 22px 28px 18px 28px;
+    margin-top: 0;
+}
+
+#player-stats h2, #commentary h2 {
+    color: #fff;
+    font-size: 1.18em;
+    font-weight: bold;
+    margin-bottom: 11px;
+}
+
+#commentary-text {
+    color: #d6fde5;
+    font-size: 1.09em;
+}
+
+#game-controls {
+    text-align: center;
+}
+
+button {
+    background: #18d696;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    padding: 12px 30px;
+    margin: 11px 8px;
+    font-size: 1.18em;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background 0.18s;
+    box-shadow: 0 1px 10px rgba(20,30,50,0.09);
+}
+
+button:hover {
+    background: #17ba88;
+}
+
+/* Extra responsive tweaks */
+@media (max-width: 700px) {
+    .container {
+        padding: 14px 4vw 10px 4vw;
+    }
+    #scoreboard {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .team1, .team2 {
+        min-width: unset;
+        padding: 15px 0 13px 0;
+    }
+}
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    #scoreboard {
+        flex-direction: column;
+    }
+
+    #scoreboard .team1,
+    #scoreboard .team2 {
+        margin-bottom: 10px;
+    }
+
+    #game-controls button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
